@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving Warning Demo</title>
+
+<style>
+    body{
+        margin:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background:#222;
+        font-family:Arial, sans-serif;
+    }
+
+    .box{
+        width:600px;
+        padding:30px;
+        background:red;
+        border:4px solid darkred;
+        border-radius:12px;
+        overflow:hidden;
+        text-align:center;
+    }
+
+    .message{
+        color:white;
+        font-size:40px;
+        font-weight:bold;
+        white-space:nowrap;
+        display:inline-block;
+        animation:move 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes move{
+        from{
+            transform:translateX(-120px);
+        }
+        to{
+            transform:translateX(120px);
+        }
+    }
+
+    .note{
+        color:white;
+        margin-top:20px;
+        font-size:18px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <div class="message">⚠ YOUR ACCOUNT IS HACKED ⚠</div>
+</div>
+
+</body>
+</html>
